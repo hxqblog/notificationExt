@@ -37,7 +37,7 @@
 
 - (void)ui{
     self.contentView = [[UIView alloc]initWithFrame:CGRectMake(20, 0, self.view.frame.size.width - 40, 350)];
-    self.contentView.center = self.view.center;
+    self.contentView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.contentView];
     
     self.iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
@@ -45,15 +45,15 @@
     self.iconImageView.layer.masksToBounds = YES;
     [self.contentView addSubview:self.iconImageView];
     
-    self.titLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.iconImageView.frame) + 8, 0, self.contentView.frame.size.width - 76 , 25)];
+    self.titLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.iconImageView.frame) + 8, 10, self.contentView.frame.size.width - 76 , 25)];
     [self.contentView addSubview:self.titLabel];
     
-    self.contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.titLabel.frame.origin.x, CGRectGetMaxY(self.titLabel.frame) + 5, self.contentView.frame.size.width - 20, 100)];
+    self.contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.titLabel.frame.origin.x, CGRectGetMaxY(self.titLabel.frame) + 5, self.titLabel.frame.size.width , 50)];
     self.contentLabel.numberOfLines = 0;
     self.contentLabel.font = [UIFont systemFontOfSize:12];
     [self.contentView addSubview:self.contentLabel];
     
-    self.bigImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.iconImageView.frame.origin.x, CGRectGetMaxY(self.contentLabel.frame) + 8, self.contentLabel.frame.size.width , self.contentView.frame.size.height - CGRectGetMaxY(self.contentLabel.frame) - 18)];
+    self.bigImageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, CGRectGetMaxY(self.contentLabel.frame) + 8, self.contentView.frame.size.width - 100 , self.contentView.frame.size.height - CGRectGetMaxY(self.contentLabel.frame) - 38)];
     [self.contentView addSubview:self.bigImageView];
     
 }

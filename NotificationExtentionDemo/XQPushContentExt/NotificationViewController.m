@@ -8,6 +8,7 @@
 #import "NotificationViewController.h"
 #import <UserNotifications/UserNotifications.h>
 #import <UserNotificationsUI/UserNotificationsUI.h>
+#import "HudView.h"
 
 @interface NotificationViewController () <UNNotificationContentExtension>
 
@@ -35,7 +36,6 @@
 }
 
 - (void)ui{
-    
     self.contentView = [[UIView alloc]initWithFrame:CGRectMake(20, 0, self.view.frame.size.width - 40, 350)];
     self.contentView.center = self.view.center;
     [self.view addSubview:self.contentView];

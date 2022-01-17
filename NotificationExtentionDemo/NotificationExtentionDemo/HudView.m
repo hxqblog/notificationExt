@@ -3,7 +3,7 @@
 //  NotificationExtentionDemo
 //
 //  Created by hxq on 2021/12/31.
-// 测试 fork操作 周一
+// 测试 fork操作
 
 #import "HudView.h"
 
